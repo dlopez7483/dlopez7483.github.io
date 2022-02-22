@@ -1,0 +1,63 @@
+<html>
+       <head>
+        <link href="css\estilo.css" rel="stylesheet" >
+        <link href="css\contacto.css" rel="stylesheet" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+       </head>
+      
+        
+        <header>
+          
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu"><img src="imagenes\menu2.png"></label>
+            <img src="imagenes\LOGOTIPO AR CONSULTORES.png" id="logo">
+        
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="equipo.html">Nosotros</a></li>
+                </ul>
+        
+            </nav>
+               </header>
+
+               <body> 
+                <div class="contacto" style="color:#FFFCF2;">
+                 
+                <form>
+                 <h1>Contactar</h1>
+                 <input type="text" name="nombre" id="name" size="10" placeholder="Nombre"><br/>
+                 <input type="text" name="correo" id="email" size="10" placeholder="Correo"><br/>
+                 <input type="text" name="numero" id="number" size="10" placeholder="Numero telefonico"><br/>
+                 <textarea name="mensaje" id="message" cols="30" rows="10" placeholder="Mensaje "></textarea><br/>
+                 <input id="enviarcorreo" type="button" value="Enviar">
+        
+                </form>
+        
+        
+                </div>
+             <script>
+                 const btnenvio = document.getElementById('enviarcorreo');
+                 btnenvio.addEventListener('click',function(e){
+                  e.preventDefault();
+                  var email = document.getElementById('email').value
+                  var nombre = document.getElementById('name').value
+                  var mensaje = document.getElementById('message').value
+                  if ((email=="")||(nombre=="")||(mensaje=="")){
+        
+        
+                  alert("Campos incompletos")
+                  }
+                  else{window.location.href= `mailto:davidlopezxd860@gmail.com? subject=mensaje_pagina&body=Nombre%3A${nombre}%0AMensaje%3A${mensaje}%0ACorreo%3A${email}`}
+                  
+                  
+        
+                 });
+             </script>   
+                
+               </body>
+
+</html>

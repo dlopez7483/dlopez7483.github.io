@@ -84,8 +84,8 @@ header label {
  .menu{
  position: absolute;
  background:#252422 ;
- width: 100%;
- margin-left: -100%;
+ width: 70%;
+ margin-left: -70%;
  transition: all 0.5s;
 
  }
